@@ -23,3 +23,7 @@ function addTask() {
     displayDiv.appendChild(taskDiv);
     taskDiv.onclick = taskDivClicker;
 }
+function taskDivClicker() {
+    let currTaskDiv = this;
+    currTaskDiv.classList.toggle("added");
+}

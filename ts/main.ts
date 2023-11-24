@@ -41,3 +41,14 @@ function addTask(){
    // Add onclick to the prod div
    taskDiv.onclick = taskDivClicker;
 }
+function taskDivClicker(){
+    // The this keyword will hold the <div> element
+    // that triggered this function call
+    let currTaskDiv = this as HTMLDivElement;
+    currTaskDiv.classList.toggle("added");
+
+    
+
+
+    
+}
