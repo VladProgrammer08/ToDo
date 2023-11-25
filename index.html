@@ -5,12 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <script src="js/main.js" defer></script>
+    <style>
+        html{
+            background-color: rgb(0, 183, 255);
+        }
+        #display > div {
+            border: 1px solid black;
+            background-color: white;
+            text-align: left;
+            display: block;           
+            max-width: 480px;
+            overflow-wrap: break-word;
+            margin-left: 0;margin-bottom: 10px;
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+        }
+
+        .added {
+
+            background-color: green !important;
+            font-size: 5px;
+            
+        }
+        #task {
+            width: 500px;
+            height: 40px;
+            margin-right: 0;
+            margin-left: 0;
+            float: right;   
+            border-top-right-radius: 10px;
+        }
+        #importance{
+            width: 466px;
+            height: 40px;
+            margin-right: 0;
+            margin-left: 0;
+            float: right; 
+            font-size: 20px;
+            border-bottom-right-radius: 10px;
+        }
+        #task{
+            margin-top: 1%;
+            font-size: 20px;
+        }
+        html, body {
+            height: 100%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+
+        #task_label1{
+            position: absolute;
+            font-size: 20px;
+            margin-top: 5px;
+            padding-top: 10px;
+            padding-bottom: 11px;            
+            margin-left: -90px;
+            border: 1px solid black;
+            background-color: white;
+            border-top-left-radius: 10px;
+
+        }
+        #task_label2{
+            position: absolute;
+            font-size: 20px;
+            margin-top: 32px;
+            border: 1px solid black;
+            background-color: white;
+            padding-top: 10px;
+            padding-bottom: 11px;
+            margin-left: -90px;
+            border-bottom-left-radius: 10px;
+            
+        }
+        #heading{
+            font-size: 70px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+        #add_button{
+            border: 1px solid black;
+            background-color: white;
+            font-size: 30px;
+            margin-left: 120px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            
+        }
+        h2{
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
+    <h1 id="heading">TO-DO LIST</h2>
     <div id="top">
-        Task to do: <input type="text" id="task"><br>
-        Importance: <input type="text" id="importance"><br>
-        <button type="button" id="add_button">Add Product</button>
+        <label id="task_label1">Task to do:</label>
+        <input type="text" id="task"><br>
+        <label id="task_label2">Due what time:</label>
+        <input type="text" id="importance"><br>
+        <button type="button" id="add_button">Add Note</button>
     </div>
     <br>
     <br>
