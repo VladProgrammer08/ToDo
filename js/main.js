@@ -9,6 +9,14 @@ function addTask() {
     let task = taskBox.value;
     let taskImportanceBox = document.querySelector("#importance");
     let taskImportance = taskImportanceBox.value;
+    if (task == "") {
+        alert("You need to enter your Task");
+        return;
+    }
+    if (taskImportance == "") {
+        alert("You need to enter due date");
+        return;
+    }
     let newTasks = new Tasks();
     newTasks.task = task;
     newTasks.importance = taskImportance;
@@ -17,6 +25,8 @@ function addTask() {
     let taskImportancePara = document.createElement("p");
     taskHeading.textContent = newTasks.task;
     taskImportancePara.textContent = newTasks.importance;
+    taskHeading.textContent = "• " + task;
+    taskImportancePara.textContent = "Due: " + taskImportance;
     taskDiv.appendChild(taskHeading);
     taskDiv.appendChild(taskImportancePara);
     let displayDiv = document.querySelector("#display");

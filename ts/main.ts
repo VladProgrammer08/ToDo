@@ -15,6 +15,16 @@ function addTask(){
     let task = taskBox.value;
     let taskImportanceBox = document.querySelector("#importance") as HTMLInputElement;
     let taskImportance = taskImportanceBox.value;
+    if (task == ""){
+        alert("You need to enter your Task");
+        return;
+    }
+    if (taskImportance == ""){
+        alert("You need to enter due date")
+        return;
+    }
+
+    
 
     // Populate object
     let newTasks = new Tasks();
@@ -29,6 +39,8 @@ function addTask(){
    let taskImportancePara = document.createElement("p");
    taskHeading.textContent = newTasks.task;
    taskImportancePara.textContent = newTasks.importance;
+   taskHeading.textContent = "• " + task;
+   taskImportancePara.textContent = "Due: " + taskImportance;
 
    // Add elements to product div
    taskDiv.appendChild(taskHeading);
@@ -46,9 +58,5 @@ function taskDivClicker(){
     // that triggered this function call
     let currTaskDiv = this as HTMLDivElement;
     currTaskDiv.classList.toggle("added");
-
-    
-
-
-    
+   
 }
